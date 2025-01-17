@@ -118,3 +118,20 @@ button {
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
+
+/* Global styling for inputs and selects */
+input, select {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Focus effect on input/select */
+input:focus, select:focus {
+  border-color: #4a90e2; /* Blue color on focus */
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); /* Light blue shadow */
+}
