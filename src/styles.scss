@@ -1,1 +1,137 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap');
+
+$background-color: #0a0a0a; // Deep black background
+$primary-neon-green: #39ff14;
+$accent-neon-pink: #ff007f;
+$text-color: #e0e0e0; // Off-white
+
+body {
+  background: linear-gradient(135deg, $background-color, #1a1a1a);
+  color: $text-color;
+  font-family: "Sedgwick Ave";
+}
+
+// Global styling for neon glow
+a {
+  color: $primary-neon-green;
+  text-decoration: none;
+  text-shadow: 0 0 5px $primary-neon-green;
+  &:hover {
+    text-shadow: 0 0 15px $primary-neon-green;
+  }
+}
+
+// Styling for the mat-form-field
+.mat-form-field {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 0 10px $primary-neon-green;
+  padding: 10px;
+
+  mat-label {
+    font-family: "Sedgwick Ave", sans-serif;
+    font-size: 1.2rem;
+    color: $primary-neon-green;
+    text-shadow: 0 0 5px $primary-neon-green;
+  }
+
+  input.matInput {
+    color: $text-color;
+    caret-color: $accent-neon-pink;
+    border: none;
+    background: transparent;
+  }
+
+  .mat-form-field-underline {
+    background: linear-gradient(90deg, $primary-neon-green, $accent-neon-pink);
+    height: 2px;
+  }
+
+  .mat-form-field-appearance-outline {
+    .mat-form-field-outline {
+      border: 1px solid rgba(57, 255, 20, 0.5);
+    }
+    .mat-form-field-outline-thick {
+      border: 2px solid $primary-neon-green;
+    }
+  }
+}
+
+// Buttons styled like pill packs
+button {
+  background: $accent-neon-pink;
+  color: $text-color;
+  font-family: "Sedgwick Ave", sans-serif;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 0 10px $accent-neon-pink;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: $primary-neon-green;
+    box-shadow: 0 0 20px $primary-neon-green;
+    transform: scale(1.05);
+  }
+}
+
+// Additional elements (e.g., glitch effect for logo)
+.logo {
+  font-family: "Sedgwick Ave", sans-serif;
+  font-size: 3rem;
+  color: $primary-neon-green;
+  text-shadow: 0 0 10px $primary-neon-green, 0 0 20px $primary-neon-green;
+  animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 2px $accent-neon-pink, -2px -2px $primary-neon-green;
+  }
+  50% {
+    text-shadow: -2px -2px $accent-neon-pink, 2px 2px $primary-neon-green;
+  }
+  100% {
+    text-shadow: 2px 2px $accent-neon-pink, -2px -2px $primary-neon-green;
+  }
+}
+
+// Background vinyl record animation
+.background-vinyl {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #000 60%, $primary-neon-green 100%);
+  border-radius: 50%;
+  animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Global styling for inputs and selects */
+input, select {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Focus effect on input/select */
+input:focus, select:focus {
+  border-color: #4a90e2; /* Blue color on focus */
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); /* Light blue shadow */
+}

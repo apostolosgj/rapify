@@ -1,24 +1,10 @@
 import { Routes } from '@angular/router';
-import { LicenseGeneratorComponent } from './license-generator/license-generator.component';
-import { OnlineShopComponent } from './online-shop/online-shop.component';
-import { PurchasePageComponent } from './online-shop/ui/purchase-page.component';
+import { AiTextGenComponent } from './ai-text-gen/ai-text-gen.component';
+import { QuizComponent } from './quiz/quiz.component';
+import { SuccesFactorsComponent } from './success-factors/success-factors.component';
 
 export const routes: Routes = [
-    {
-        path: 'license-generator',
-        pathMatch: 'full',
-        title: 'Lizenzgenerator',
-        component: LicenseGeneratorComponent
-    },
-    {
-        path: 'online-shop',
-        pathMatch: 'full',
-        title: 'Online-Shop',
-        component: OnlineShopComponent
-    },
-    {
-        path: 'purchase/:kursId',
-        title: 'Kaufabwicklung',
-        component: PurchasePageComponent
-    }
+  { path: 'ki-text', component: AiTextGenComponent },
+  { path: 'quiz', component: QuizComponent },
+  { path: 'success', component: SuccesFactorsComponent },
 ];
