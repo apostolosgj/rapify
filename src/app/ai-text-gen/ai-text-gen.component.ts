@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { OpenAI } from 'openai';
-import { keys } from '../../../vars';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -140,7 +139,7 @@ export class AiTextGenComponent {
   response: string = '';
   keywords: string = '';
 
-  openai = new OpenAI({ apiKey: keys.openai, dangerouslyAllowBrowser: true });
+  openai = new OpenAI({ apiKey: "keys.openai", dangerouslyAllowBrowser: true });
 
   async generateText() {
     if (!this.keywords.trim()) {
