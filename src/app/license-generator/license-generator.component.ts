@@ -39,7 +39,7 @@ import { CommonModule } from '@angular/common';
     }
   `,
   template: `
-    <h1>Lizenzgenerator</h1>
+    <a href="/home" ><h1>Lizenzgenerator</h1></a>
     <button (click)="generateLicense()" [disabled]="isLoading()">Lizenz generieren</button>
     <div *ngIf="isLoading()" class="loading-bar">
       <div class="loading-bar-inner"></div>

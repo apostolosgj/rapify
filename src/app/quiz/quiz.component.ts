@@ -75,7 +75,7 @@ import { FormsModule } from '@angular/forms';
   `,
   template: `
     <div class="container">
-      <div class="logo">Rapify</div>
+      <a href="/home"> <div class="logo">Rapify</div></a>
 
       <div class="quiz-container">
         <h1 class="quiz-title">

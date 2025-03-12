@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
     <body>
       <div class="background-vinyl"></div>
       <div class="container">
-        <div class="logo">🎤 Rapify</div>
+        <a href="/home"><div class="logo">🎤 Rapify</div></a>
 
         <div class="funny-sidebar">
           <p>„Schreib keine Texte, lass die KI flexen!“</p>
